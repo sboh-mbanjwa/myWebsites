@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> registration form </title>
+		<link rel="stylesheet" type="text/css" href="FormStyle.css">
+	</head>
+	
+	<body>
+	<h2> SHUNI IPHONES AND SNEAKER RETAILERS (pty)LTD</h2>
+	<form>
+		<fieldset>
+			<legend><b> Please enter your Details </b></legend>
+			first Name: <br>
+			<input type="text" Name="FirstName" Maxlength="30" autofocus><br>
+			Last Name:<br>
+			<input type="text" Name="LastName" Maxlength="30"><br>
+			E-mail: <br>
+			<input type="text" Name="Email" placeholder = "Choose a level" required> <br>
+			date of birth:<br>
+			
+			<input type="date" name="dob">
+				<fieldset>
+					<legend><b> Select your Payment Method </b></legend>
+						<select Name="Payment">
+							<option value="cash">Cash</option>
+							<option value="online">online</option>
+							<option value="Card">Card</option>
+						</select>
+				</fieldset>
+			<fieldset>
+				<legend><b>Order Specifications</b></legend>
+					<input type="checkbox" name="Subject">Iphones<br>
+					<input type="checkbox" name="Subject">Sneakers<br>
+					<input type="checkbox" name="Subject">Accessories<br>
+						
+			</fieldset>
+			<input type = "Submit" Value="Submit">
+			<input type ="Reset">
+		</fieldset>
+		</form>
+	</body>
+</html>

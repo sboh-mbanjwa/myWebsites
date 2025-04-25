@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+	}
+body {
+		font-family: arial, helvetica, sans-serif;
+		background-color: aqua;
+		}
+		/* setting the header style*/
+header { 
+		background-color: lightblue;
+		padding: 10px;
+		text-align: center;
+		font-size: 36px;
+		color: darkblue;
+		}
+		/* the section element is used as a container for nav and article */
+		section {
+				display: -webkit-flex 		/*the reference to -webkit is for browsers not compatable with CSS3 style*/
+				display: flex;
+				}
+	/* setting the navigation menu style*/
+nav{
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background: white;
+	padding: 20px;
+	}
+	/* style the list inside the menu style*/
+	nav ul {
+			list-style-type: none;
+			padding: 0;
+			}
+	li a {
+		/* we are setting the style for each anchor element in each list item */
+		display: block;
+		color: darkblue;
+		padding: 8px 16px;
+		text-decoration: none;
+		}
+	li a:hover {
+		/* we are changing the link color when the mouse hovers over it */
+			background-color: lightgreen;
+			color: white;
+			}
+	/* setting the content style */
+	article {
+			-webkit-flex: 2;
+			-ms-flex: 2;
+			flex: 2;
+			background-color: gray;
+			padding: 10px;
+			}
+	/* setting the footer style */
+	footer {
+			background-color: lightblue;
+			padding: 10px;
+			text-align: center
+			}
+	/* this code is used to resize the section columns/boxes automatically and make them stack up on top
+	of each other if there there is not enough space on the screen. */
+	@media (max-width: 600px) {
+								section { 
+									-webkit-flex-direction: column;
+									flex-direction: column; }
+								}
+	select {
+			width: 100%;
+			padding: 16px 20px;
+			border: none;
+			border-radius: 4px;
+			}
+	input[type=Register], input[type=Login] {
+		background-color: blue;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	input[type=Register]:hover {
+		background-color: red;
+	}
+	input[type=Login]:hover {
+		background-color: green;
+	}
+	fieldset {
+			border-radius: 5px;
+			background-color: lightgray;
+			padding: 20px
+	}
+	
+	
+	
+	
+	
+	
