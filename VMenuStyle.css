@@ -1,0 +1,21 @@
+ul {
+	list-style-type: none; /*this removes the bullets from the list*/
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: lightblue; /*the entire list will have this background colour*/
+	}
+li a{
+	/*we are setting the style for each anchor element in each list item*/
+	display: block; /*this is to set style of each link to be displayed as a block */
+	color: darkblue;
+	padding: 8px 16px;
+	text-decoration: none; /*this removes the underline from the links*/
+	}
+li a:hover {
+	/*we are changing the link color when the mouse hovers over it */
+	background-color: lightgreen;
+	color: white;
+	}
+	
+	

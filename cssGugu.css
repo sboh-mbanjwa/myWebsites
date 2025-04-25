@@ -1,0 +1,83 @@
+* {
+	/*Setting all elements with a box-sizing attribyte to be a border boc.*/
+	box-sizing: border-box;
+}
+body{font-family: Arial, Helvetica, sans-serif;
+}
+/* style the header */
+header { 
+	background-color: purple;
+	padding: 10px;
+	text-aling: center;
+	font-size:30px
+	color: green;
+}
+/*Setting the sytle for the article section, Width is 60%*/
+nav {
+	float: left;
+	width: 20%;
+	background: aqua;
+	padding: 20px;
+}
+/*style the list inside the menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+li a {
+	/* we arebsetting the style for each anchor element in each list item*/
+	display: block;
+	color: darkblue;
+	padding: 10px 16px;
+}
+li a:hover {
+	/* we are changing the link when the mouse hover over it */
+	background-color: lightblue;
+	color: green;
+}
+/*setting  the sytle for article section. width is 60%*/
+article {
+	float: left;
+	padding: 20px;
+	width: 60%;
+	background-color: darkblue;
+}
+/* setting style for aside section. width is 10%*/
+aside {
+	float: left;
+	padding: 20px;
+	width: 20%;
+	background: aqua;
+}
+/*Note from above code: Nav width + article width + aside width = 100% .
+These three elements are found inside the section element. They can each
+be adjasted to different widths, byt the total must always equal 100%*/
+
+/* Clear floats after the cilumn */
+section:after {
+	content: "";
+	display: column;
+	clear: both;
+}
+
+/*style the footer */
+footer {
+	background-color: lightblue;
+	padding: 10px;
+	text-align: center;
+}
+
+/* This code is used to resize the section colums/boxes automatically and 
+make them stack up on top of each other if there is  not enough space on the screen.*/
+
+@media (max-width: 600%) {
+	nav, article, aside {
+	width: 100%;
+	height: auto;
+	}
+}
+	
+	
+	
+	
+	
