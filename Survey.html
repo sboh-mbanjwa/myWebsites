@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fill in the survey</title>
+  <link rel="stylesheet" href="survey-style.css" />
+ </head>
+<body>
+  <div class="container">
+    <header>
+      <img src="shuni Logo.jpg" alt="Company Logo">
+      <h1>Customer Experience Survey</h1>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- Form -->
+    <form id="surveyForm">
+      <div class="form-step active">
+        <h2><i class="fas fa-user"></i> Personal Information</h2>
+
+        <label><i class="fas fa-flag"></i> Are you a South African Citizen?</label><br />
+        <input type="radio" name="citizen" value="Yes" required /> Yes
+        <input type="radio" name="citizen" value="No" /> No
+
+        <label><i class="fas fa-venus-mars"></i> Gender</label><br />
+        <input type="radio" name="gender" value="Male" required /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+        <input type="radio" name="gender" value="Other" /> Other
+
+        <label><i class="fas fa-birthday-cake"></i> Date of Birth</label><br />
+        <input type="date" name="dob" required />
+         
+      <!-- note this button below -->
+          <a href="index.html">
+  <button type="button">Go Back to Home</button>
+</a>
+       
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="form-step">
+        <h2><i class="fas fa-calendar-check"></i> Appointment Preferences</h2>
+
+        <label><i class="fas fa-calendar-day"></i> Preferred Appointment Date</label><br />
+        <input type="date" name="appointment-date" required />
+
+        <label><i class="fas fa-cut"></i> Style Type</label><br />
+        <input type="text" name="style" placeholder="Enter style type"/>
+
+        <label><i class="fas fa-money-bill-wave"></i> Estimated Price Range</label><br />
+        <input type="number" name="price" placeholder="e.g. 1000" required />
+
+
+         <!-- note this button below -->
+          <a href="index.html">
+  <button type="button">Go Back to Home</button>
+</a>
+        <button type="button" class="prev-btn">Back</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="form-step">
+        <h2><i class="fas fa-star"></i> Service Rating</h2>
+
+        <label><i class="fas fa-thumbs-up"></i> How would you rate our service?</label><br />
+        <input type="radio" name="rating" value="Excellent" required /> Excellent
+        <input type="radio" name="rating" value="Good" /> Good
+        <input type="radio" name="rating" value="Average" /> Average
+        <input type="radio" name="rating" value="Poor" /> Poor
+
+        <label><i class="fas fa-check-circle"></i> Would you recommend us?</label><br />
+        <input type="checkbox" name="recommend" value="Yes" /> Yes
+        <input type="checkbox" name="recommend" value="No" /> No
+
+        <label><i class="fas fa-comment"></i> Additional Feedback</label><br />
+        <textarea name="feedback" rows="4" placeholder="Your comments..."></textarea>
+
+         <!-- note this button below -->
+          <a href="index.html">
+  <button type="button">Go Back to Home</button>
+</a>
+        <button type="button" class="prev-btn">Back</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+
+    <footer>
+      <p>&copy; 2023 Shuni iPhones & Sneakers (Pty) Ltd. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="survey-script.js"></script>
+</body>
+</html>
