@@ -1,98 +1,262 @@
+/* Reset box-sizing and margins/paddings */
 * {
-	box-sizing: border-box;
-	}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
 body {
-		font-family: arial, helvetica, sans-serif;
-		background-color: aqua;
-		}
-		/* setting the header style*/
-header { 
-		background-color: lightblue;
-		padding: 10px;
-		text-align: center;
-		font-size: 36px;
-		color: darkblue;
-		}
-		/* the section element is used as a container for nav and article */
-		section {
-				display: -webkit-flex 		/*the reference to -webkit is for browsers not compatable with CSS3 style*/
-				display: flex;
-				}
-	/* setting the navigation menu style*/
-nav{
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-	background: white;
-	padding: 20px;
-	}
-	/* style the list inside the menu style*/
-	nav ul {
-			list-style-type: none;
-			padding: 0;
-			}
-	li a {
-		/* we are setting the style for each anchor element in each list item */
-		display: block;
-		color: darkblue;
-		padding: 8px 16px;
-		text-decoration: none;
-		}
-	li a:hover {
-		/* we are changing the link color when the mouse hovers over it */
-			background-color: lightgreen;
-			color: white;
-			}
-	/* setting the content style */
-	article {
-			-webkit-flex: 2;
-			-ms-flex: 2;
-			flex: 2;
-			background-color: gray;
-			padding: 10px;
-			}
-	/* setting the footer style */
-	footer {
-			background-color: lightblue;
-			padding: 10px;
-			text-align: center
-			}
-	/* this code is used to resize the section columns/boxes automatically and make them stack up on top
-	of each other if there there is not enough space on the screen. */
-	@media (max-width: 600px) {
-								section { 
-									-webkit-flex-direction: column;
-									flex-direction: column; }
-								}
-	select {
-			width: 100%;
-			padding: 16px 20px;
-			border: none;
-			border-radius: 4px;
-			}
-	input[type=Register], input[type=Login] {
-		background-color: blue;
-		color: white;
-		padding: 14px 20px;
-		margin: 8px 0;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
-	}
-	input[type=Register]:hover {
-		background-color: red;
-	}
-	input[type=Login]:hover {
-		background-color: green;
-	}
-	fieldset {
-			border-radius: 5px;
-			background-color: lightgray;
-			padding: 20px
-	}
-	
-	
-	
-	
-	
-	
+    font-family: 'Roboto', sans-serif; /* Using a more modern font */
+    background-color: #424447; /* Slightly off-white background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #007BFF; /* Vibrant blue for header */
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section container styles */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Navigation styles with gradient and shadow */
+nav {
+    flex: 1;
+    background: linear-gradient(135deg, #007BFF, #32cd32); /* Gradient from blue to green */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for navigation */
+nav:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav li a {
+    display: block;
+    color: #fff; /* White text to contrast with the gradient */
+    padding: 14px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Link hover effect */
+nav li a:hover {
+    background-color: #ff6347; /* Tomato color on hover */
+    color: white;
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Article Styles - Professional Enhancements */
+article {
+    flex: 2;
+     background: linear-gradient(135deg, #007BFF, #32cd32); /* Gradient from blue to green */
+    background-color: #ffffff; /* Clean white background */
+    padding: 30px; /* Increased padding for spacious feel */
+    border-radius: 12px; /* Rounded corners for a soft look */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the article */
+article:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Heading within article */
+article h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px; /* Space after heading */
+    line-height: 1.4; /* Space between lines */
+    position: relative;
+}
+
+/* Adding an accent line to the article heading */
+article h2::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #73ff00; /* Blue accent line */
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Paragraph styling */
+article p {
+    font-size: 1.125rem; /* Slightly larger text */
+    color: #555; /* Soft dark color for text */
+    line-height: 1.8; /* Spacing between lines for readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Emphasizing important text (e.g., for instructions or key details) */
+article .highlight {
+    font-weight: bold;
+    color: #d6f393; /* Accent color for emphasis */
+}
+
+/* Adding space between paragraphs */
+article p + p {
+    margin-top: 15px;
+}
+
+/* Adding subtle borders for sections within the article */
+article section {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Footer Inside Article */
+article footer {
+    font-size: 1rem;
+    color: #888; /* Light gray text for footer */
+    margin-top: 20px;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 10px;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(135deg ,rgb(140, 140, 223) ,rgb(241, 112, 112));
+    /* background-color: #007BFF;
+    the above color is blue on the foooter background and i removed it to put the grad color   */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input fields and buttons */
+select, input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for inputs */
+select:focus, input:focus, textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* Subtle blue glow on focus */
+}
+
+/* Submit button styling */
+input[type="submit"], input[type="button"] {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px); /* Button lifts on hover */
+}
+
+/* Advanced fieldset styles */
+fieldset {
+    border-radius: 8px;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007BFF;
+    padding: 0 10px;
+}
+
+/* Hover effect for buttons */
+input[type="submit"]:active, input[type="button"]:active {
+    transform: translateY(2px); /* Button presses down on click */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    article {
+        margin-left: 0;
+    }
+
+    header {
+        font-size: 2rem;
+    }
+
+    nav {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"], input[type="button"] {
+        width: 100%;
+    }
+
+    nav ul {
+        padding-left: 20px;
+    }
+}
