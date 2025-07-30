@@ -11,14 +11,14 @@
 		<fieldset>
 			<legend><b> Please enter your Details </b></legend>
 			first Name: <br>
-			<input type="text" Name="FirstName" Maxlength="30" autofocus><br>
+			<input type="text" Name="FirstName" Maxlength="30" autofocus placeholder="eg :Siboniso" required><br>
 			Last Name:<br>
-			<input type="text" Name="LastName" Maxlength="30"><br>
+			<input type="text" Name="LastName" Maxlength="30" placeholder="eg :Mbanjwa" required><br>
 			E-mail: <br>
-			<input type="text" Name="Email" placeholder = "Choose a level" required> <br>
+			<input type="text" Name="Email" placeholder = "Type in your Email" format="---@gmail.com" required> <br>
 			date of birth:<br>
 			
-			<input type="date" name="dob">
+			<input type="date" name="dob" class="date">
 				<fieldset>
 					<legend><b> Select your Payment Method </b></legend>
 						<select Name="Payment">
@@ -34,8 +34,12 @@
 					<input type="checkbox" name="Subject">Accessories<br>
 						
 			</fieldset>
+			
+			
 			<input type = "Submit" Value="Submit">
+			<input type="Home" value="Home" nonce="Home">
 			<input type ="Reset">
+			
 		</fieldset>
 		</form>
 	</body>
